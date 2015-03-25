@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>MyRealm xref</title>
+<link type="text/css" rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs//MyRealm.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * Licensed to the Apache Software Foundation (ASF) under one</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * or more contributor license agreements.  See the NOTICE file</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * distributed with this work for additional information</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> * regarding copyright ownership.  The ASF licenses this file</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * to you under the Apache License, Version 2.0 (the</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> * "License"); you may not use this file except in compliance</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * with the License.  You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *     <a href="http://www.apache.org/licenses/LICENSE-2." target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.</a>0</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing,</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> * software distributed under the License is distributed on an</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> * KIND, either express or implied.  See the License for the</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> * specific language governing permissions and limitations</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment"> * under the License.</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> org.apache.ki.authc.*;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> org.apache.ki.authz.AuthorizationInfo;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> org.apache.ki.realm.AuthorizingRealm;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> org.apache.ki.subject.PrincipalCollection;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> java.util.Collection;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <em class="jxr_javadoccomment"> * @author Les Hazlewood</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <em class="jxr_javadoccomment"> * @since Aug 28, 2008 5:13:06 PM</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="..//MyRealm.html">MyRealm</a> <strong class="jxr_keyword">extends</strong> <a href="../org/apache/ki/realm/AuthorizingRealm.html">AuthorizingRealm</a> {
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      <strong class="jxr_keyword">public</strong> <a href="..//MyRealm.html">MyRealm</a>() {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      }
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <em class="jxr_javadoccomment">     * Simulates a call to an underlying data store - in a 'real' application, this call would communicate with</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <em class="jxr_javadoccomment">     * an underlying data store via an EIS API (JDBC, JPA, Hibernate, etc).</em>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <em class="jxr_javadoccomment">     * &lt;p/&gt;</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <em class="jxr_javadoccomment">     * Note that when implementing your own realm, there is no need to check against a password (or other credentials)</em>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <em class="jxr_javadoccomment">     * in this method. The {@link org.apache.ki.realm.AuthenticatingRealm AuthenticatingRealm} superclass will do</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  <em class="jxr_javadoccomment">     * that automatically via the use of a configured</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <em class="jxr_javadoccomment">     * {@link org.apache.ki.authc.credential.CredentialsMatcher CredentialsMatcher} (see this example's corresponding</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_javadoccomment">     * &lt;code&gt;ki.ini&lt;/code&gt; file to see a configured credentials matcher).</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <em class="jxr_javadoccomment">     * &lt;p/&gt;</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment">     * All that is required is that the account information include directly the credentials found in the EIS.</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment">     * @param username the username for the account data to retrieve</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment">     * @return the Account information corresponding to the specified username:</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">protected</strong> <a href="../org/apache/ki/authc/SimpleAccount.html">SimpleAccount</a> getAccount(String username) {
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <em class="jxr_comment">//just create a dummy.  A real app would construct one based on EIS access.</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <a href="../org/apache/ki/authc/SimpleAccount.html">SimpleAccount</a> account = <strong class="jxr_keyword">new</strong> <a href="../org/apache/ki/authc/SimpleAccount.html">SimpleAccount</a>(username, <span class="jxr_string">"sha256EncodedPasswordFromDatabase"</span>, getName());
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <em class="jxr_comment">//simulate some roles and permissions:</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          account.addRole(<span class="jxr_string">"user"</span>);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          account.addRole(<span class="jxr_string">"admin"</span>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <em class="jxr_comment">//most applications would assign permissions to Roles instead of users directly because this is much more</em>
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <em class="jxr_comment">//flexible (it is easier to configure roles and then change role-to-user assignments than it is to maintain</em>
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <em class="jxr_comment">// permissions for each user).</em>
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <em class="jxr_comment">// But these next lines assign permissions directly to this trivial account object just for simulation's sake:</em>
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          account.addStringPermission(<span class="jxr_string">"blogEntry:edit"</span>); <em class="jxr_comment">//this user is allowed to 'edit' _any_ blogEntry</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <em class="jxr_comment">//fine-grained instance level permission:</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          account.addStringPermission(<span class="jxr_string">"printer:print:laserjet2000"</span>); <em class="jxr_comment">//allowed to 'print' to the 'printer' identified</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <em class="jxr_comment">//by the id 'laserjet2000'</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <strong class="jxr_keyword">return</strong> account;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      }
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">protected</strong> <a href="../org/apache/ki/authc/AuthenticationInfo.html">AuthenticationInfo</a> doGetAuthenticationInfo(<a href="../org/apache/ki/authc/AuthenticationToken.html">AuthenticationToken</a> token) <strong class="jxr_keyword">throws</strong> AuthenticationException {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <em class="jxr_comment">//we can safely cast to a UsernamePasswordToken here, because this class 'supports' UsernamePasswordToken</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <em class="jxr_comment">//objects.  See the Realm.supports() method if your application will use a different type of token.</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <a href="../org/apache/ki/authc/UsernamePasswordToken.html">UsernamePasswordToken</a> upToken = (UsernamePasswordToken) token;
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">return</strong> getAccount(upToken.getUsername());
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      }
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      <strong class="jxr_keyword">protected</strong> <a href="../org/apache/ki/authz/AuthorizationInfo.html">AuthorizationInfo</a> doGetAuthorizationInfo(<a href="../org/apache/ki/subject/PrincipalCollection.html">PrincipalCollection</a> principals) {
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <em class="jxr_comment">//simulate a call to an underlying data store:</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <em class="jxr_comment">//get only the principals that this realm cares about:</em>
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          Collection thisRealmPrincipals = principals.fromRealm(getName());
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>  
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <em class="jxr_comment">//note that the return value of 'getName()' here is whatever you specify it to be in ki.ini</em>
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          <em class="jxr_comment">//in this case, the ki.ini file calls it 'myRealm'.  All realms must have a unique name.</em>
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <em class="jxr_comment">//Since this realm supplied these principals from the doGetAuthenticationInfo method above when the</em>
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          <em class="jxr_comment">//user logged-in and that method in this simple example has only one principal - a username - we can safely</em>
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <em class="jxr_comment">//assume the only element in this collection is that username.</em>
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          String username = (String) thisRealmPrincipals.iterator().next();
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          <em class="jxr_comment">//call the underlying EIS for the account data:</em>
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          <strong class="jxr_keyword">return</strong> getAccount(username);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2015. All rights reserved.</div>
+</body>
+</html>
